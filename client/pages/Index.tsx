@@ -15,7 +15,7 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <a href="#" className="text-xl font-bold text-foreground">
-              Frontend Developer
+              Frontend Developer Portfolio
             </a>
             <div className="hidden md:flex gap-8">
               <button
@@ -39,7 +39,7 @@ export default function Index() {
             </div>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/cayceworld"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-border text-muted-foreground hover:text-accent hover:border-accent transition-colors"
@@ -48,7 +48,7 @@ export default function Index() {
                 <Github size={18} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/vladyslav-sydorenko-5b4301151/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-border text-muted-foreground hover:text-accent hover:border-accent transition-colors"
@@ -68,6 +68,14 @@ export default function Index() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
+            <div className="flex items-center justify-center mb-6">
+              <img
+                src="/profile.jpg"
+                alt="Portrait of Vladyslav Sydorenko"
+                className="w-64 h-64 rounded-full object-cover"
+              />
+            </div>
+
             <div className="mb-6 inline-block">
               <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider">
                 Welcome to my portfolio
@@ -75,12 +83,14 @@ export default function Index() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
-              Hi, I'm a{" "}
+              Hi, I'm Vlad, a{" "}
               <span className="text-accent">Frontend Developer</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Crafting beautiful, responsive web experiences with modern technologies. 2+ years of experience building scalable applications.
+              I enjoy crafting modern, user-friendly web applications and
+              continuously improving my frontend skills. Passionate about clean
+              code, performance, and learning new technologies.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -91,7 +101,7 @@ export default function Index() {
                 View My Work
               </button>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:cayceworld@outlook.com"
                 className="px-8 py-3 rounded-lg border border-border text-foreground font-semibold hover:bg-secondary transition-colors inline-flex items-center justify-center"
               >
                 Get in Touch
@@ -110,7 +120,10 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 border-t border-border bg-secondary/30">
+      <section
+        id="about"
+        className="py-20 border-t border-border bg-secondary/30"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
@@ -119,15 +132,25 @@ export default function Index() {
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate frontend developer with 2+ years of hands-on experience building responsive, user-centric web applications. I specialize in creating intuitive interfaces using modern React-based technologies and CSS frameworks, with a keen attention to performance and accessibility.
+                I'm a passionate frontend developer with 2+ years of hands-on
+                experience building responsive, user-centric web applications. I
+                specialize in creating intuitive interfaces using modern
+                React-based technologies and CSS frameworks, with a keen
+                attention to performance and accessibility.
               </p>
 
               <p>
-                My approach combines solid software engineering principles with a deep understanding of user experience. I thrive in collaborative environments where I can work with designers, backend developers, and stakeholders to deliver polished products that users love.
+                My approach combines solid software engineering principles with
+                a deep understanding of user experience. I thrive in
+                collaborative environments where I can work with designers,
+                backend developers, and stakeholders to deliver polished
+                products that users love.
               </p>
 
               <p>
-                When I'm not coding, I enjoy exploring new frontend frameworks, contributing to open-source projects, and staying updated with the latest web technologies and best practices.
+                When I'm not coding, I enjoy exploring new frontend frameworks,
+                contributing to open-source projects, and staying updated with
+                the latest web technologies and best practices.
               </p>
             </div>
           </div>
@@ -142,7 +165,8 @@ export default function Index() {
               Commercial Projects
             </h2>
             <p className="text-muted-foreground max-w-2xl">
-              Professional projects built for clients and companies, showcasing real-world application development and problem-solving skills.
+              Professional projects built for clients and companies, showcasing
+              real-world application development and problem-solving skills.
             </p>
           </div>
 
@@ -181,7 +205,8 @@ export default function Index() {
               Learning & Side Projects
             </h2>
             <p className="text-muted-foreground max-w-2xl">
-              Personal projects built to explore new technologies, experiment with ideas, and contribute to the developer community.
+              Personal projects built to explore new technologies, experiment
+              with ideas, and contribute to the developer community.
             </p>
           </div>
 
@@ -235,7 +260,7 @@ export default function Index() {
                     >
                       {skill}
                     </span>
-                  )
+                  ),
                 )}
               </div>
             </div>
@@ -246,20 +271,16 @@ export default function Index() {
                 Frameworks & Libraries
               </h3>
               <div className="flex flex-wrap gap-3">
-                {[
-                  "React",
-                  "Next.js",
-                  "Vue.js",
-                  "React Router",
-                  "Redux",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {["React", "Next.js", "Vue.js", "React Router", "Redux"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
 
@@ -269,20 +290,16 @@ export default function Index() {
                 Tools & Technologies
               </h3>
               <div className="flex flex-wrap gap-3">
-                {[
-                  "Git",
-                  "Webpack",
-                  "Vite",
-                  "Figma",
-                  "REST APIs",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {["Git", "Webpack", "Vite", "Figma", "REST APIs"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           </div>
