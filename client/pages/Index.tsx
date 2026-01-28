@@ -212,7 +212,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Learning & Side Projects Section */}
+      {/* Freelance Projects */}
       <section className="py-20 border-t border-border bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
@@ -229,7 +229,7 @@ export default function Index() {
             <ProjectCard
               title="Transport Company Landing Page"
               description="A static landing website built for a transport company, focused on clean design and user-friendly functionality. The project demonstrates practical frontend skills with React, SCSS, and modern development tooling."
-              technologies={["HTML", "SCSS", "JavaScript"]}
+              technologies={["JavaScript", "HTML", "SCSS"]}
               githubUrl="https://github.com/cayceworld/transport-company-website"
               imageUrls={[
                 "moversbonn/one",
@@ -242,15 +242,27 @@ export default function Index() {
                 "Google Maps integration to display company location",
                 "Automatic fetching and displaying of Google Reviews with live updates",
                 "Contact form for customer inquiries",
+                "Full desktop and mobile responsiveness",
               ]}
             />
 
             <ProjectCard
-              title="Web Performance Toolkit"
-              description="Collection of tools and utilities for analyzing and improving web performance. Includes metrics dashboard, automated testing, and optimization recommendations."
-              technologies={["Vue.js", "Vite", "Web APIs", "Chart.js"]}
-              githubUrl="https://github.com"
-              liveUrl="https://example.com"
+              title="Legalization Company"
+              description="A responsive landing website for a legal services platform, designed to clearly present information and engage visitors. The project emphasizes clear structure, user-friendly navigation, and accessibility across devices."
+              technologies={["JavaScript", "HTML", "SCSS"]}
+              liveUrl="https://work-legal-in.com/#/main"
+              imageUrls={[
+                "legalin/one",
+                "legalin/two",
+                "legalin/three",
+                "legalin/four",
+                "legalin/five",
+              ]}
+              featuresDesc={[
+                "Multi-section landing page with smooth navigation",
+                "Interactive forms for user inquiries",
+                "Responsive design optimized for desktop and mobile",
+              ]}
             />
           </div>
         </div>

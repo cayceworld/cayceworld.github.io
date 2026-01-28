@@ -129,7 +129,7 @@ export default function ProjectCard({
               className="inline-flex items-center gap-1.5 px-3 py-2 rounded-md bg-accent text-accent-foreground text-sm font-medium hover:bg-accent/90 transition-colors"
             >
               <ExternalLink size={14} />
-              Live Demo
+              Live
             </a>
           )}
           {githubUrl && (
