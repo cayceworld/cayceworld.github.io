@@ -149,32 +149,6 @@ export default function FeaturedProjectCard({
             ))}
           </div>
         </div>
-
-        {/* Links */}
-        <div className="flex gap-4">
-          {liveUrl && (
-            <a
-              href={liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-semibold hover:bg-accent/90 transition-colors"
-            >
-              <ExternalLink size={16} />
-              Visit Live Site
-            </a>
-          )}
-          {githubUrl && (
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-semibold hover:bg-secondary transition-colors"
-            >
-              <Github size={16} />
-              View Code
-            </a>
-          )}
-        </div>
       </div>
     </div>
   );
