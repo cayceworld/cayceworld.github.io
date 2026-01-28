@@ -273,14 +273,14 @@ export default function Index() {
             Skills & Technologies
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             {/* Languages */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-6">
                 Languages
               </h3>
               <div className="flex flex-wrap gap-3">
-                {["JavaScript", "TypeScript", "HTML", "CSS", "Sass"].map(
+                {["JavaScript", "TypeScript", "HTML", "CSS", "SCSS"].map(
                   (skill) => (
                     <span
                       key={skill}
@@ -299,16 +299,14 @@ export default function Index() {
                 Frameworks & Libraries
               </h3>
               <div className="flex flex-wrap gap-3">
-                {["React", "Next.js", "Vue.js", "React Router", "Redux"].map(
-                  (skill) => (
-                    <span
-                      key={skill}
-                      className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
-                    >
-                      {skill}
-                    </span>
-                  ),
-                )}
+                {["React", "Redux", "Relay"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
 
@@ -318,16 +316,31 @@ export default function Index() {
                 Tools & Technologies
               </h3>
               <div className="flex flex-wrap gap-3">
-                {["Git", "Webpack", "Vite", "Figma", "REST APIs"].map(
-                  (skill) => (
-                    <span
-                      key={skill}
-                      className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
-                    >
-                      {skill}
-                    </span>
-                  ),
-                )}
+                {["GraphQL", "Webpack", "NPM"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Design & Collaboration */}
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-6">
+                Design & Collaboration
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {["Figma", "Git", "GitHub"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-2 rounded-lg bg-secondary/70 text-foreground text-sm font-medium border border-border/50 hover:border-accent/50 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
