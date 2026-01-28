@@ -206,8 +206,6 @@ export default function Index() {
               "i18next",
             ]}
             imageUrls={["one", "two", "three", "four", "five"]}
-            liveUrl="https://example.com"
-            githubUrl="https://github.com"
           />
         </div>
       </section>
@@ -338,10 +336,10 @@ export default function Index() {
 
       {/* Footer */}
       <Footer
-        email="hello@example.com"
-        location="San Francisco, CA"
-        githubUrl="https://github.com"
-        linkedinUrl="https://linkedin.com"
+        email="cayceworld@outlook.com"
+        location="Wroclaw, Poland"
+        githubUrl="https://github.com/cayceworld"
+        linkedinUrl="https://www.linkedin.com/in/vladyslav-sydorenko-5b4301151/"
       />
     </div>
   );
