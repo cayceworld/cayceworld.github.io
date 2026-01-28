@@ -1,6 +1,7 @@
 import { Github, Linkedin, ChevronDown } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
+import FeaturedProjectCard from "@/components/FeaturedProjectCard.tsx";
 
 export default function Index() {
   const scrollToSection = (id: string) => {
@@ -75,24 +76,20 @@ export default function Index() {
                 className="w-64 h-64 rounded-full object-cover"
               />
             </div>
-
             <div className="mb-6 inline-block">
               <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider">
                 Welcome to my portfolio
               </span>
             </div>
-
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
               Hi, I'm Vlad, a{" "}
               <span className="text-accent">Frontend Developer</span>
             </h1>
-
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               I enjoy crafting modern, user-friendly web applications and
               continuously improving my frontend skills. Passionate about clean
               code, performance, and learning new technologies.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button
                 onClick={() => scrollToSection("projects")}
@@ -107,7 +104,6 @@ export default function Index() {
                 Get in Touch
               </a>
             </div>
-
             {/* Scroll indicator */}
             <button
               onClick={() => scrollToSection("about")}
@@ -129,71 +125,90 @@ export default function Index() {
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
               About Me
             </h2>
-
+            <h4 className="font-bold mb-2">
+              To give you an idea of who I am, here are brief answers to some
+              important questions:
+            </h4>
             <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                I'm a passionate frontend developer with 2+ years of hands-on
-                experience building responsive, user-centric web applications. I
-                specialize in creating intuitive interfaces using modern
-                React-based technologies and CSS frameworks, with a keen
-                attention to performance and accessibility.
-              </p>
+              <div>
+                <h5 className="font-bold">
+                  What is programming, and what is a software engineer?
+                </h5>
+                <p>
+                  Programming is the skill of solving problems using modern
+                  tools and technologies. A software engineer thinks critically
+                  and systematically: analyzes problems, considers options,
+                  chooses the best solution, and implements it.
+                </p>
+              </div>
 
-              <p>
-                My approach combines solid software engineering principles with
-                a deep understanding of user experience. I thrive in
-                collaborative environments where I can work with designers,
-                backend developers, and stakeholders to deliver polished
-                products that users love.
-              </p>
+              <div>
+                <h5 className="font-bold">What is discipline?</h5>
+                <p>
+                  Discipline is the ability to focus on what matters and follow
+                  through on decisions. It’s about doing the work consistently,
+                  managing your time and attention, and maintaining healthy
+                  habits to stay effective.
+                </p>
+              </div>
 
-              <p>
-                When I'm not coding, I enjoy exploring new frontend frameworks,
-                contributing to open-source projects, and staying updated with
-                the latest web technologies and best practices.
-              </p>
+              <div>
+                <h5 className="font-bold">Why programming?</h5>
+                <p>
+                  I chose this field intentionally: beyond a natural interest in
+                  technology, I have ambitions to be part of something big and
+                  to become a professional. Programming allows me to achieve
+                  both career and personal goals.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Commercial Projects Section */}
-      <section id="projects" className="py-20">
+      {/* Featured Project Section */}
+      <section id="projects" className="py-20 border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Commercial Projects
+          <div className="mb-12">
+            <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider mb-4">
+              My Main Commercial Experience
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Featured Project
             </h2>
-            <p className="text-muted-foreground max-w-2xl">
-              Professional projects built for clients and companies, showcasing
-              real-world application development and problem-solving skills.
+            <p className="text-lg text-muted-foreground max-w-3xl">
+              A real commercial experience where I took ownership of the
+              frontend and grew as a developer.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <ProjectCard
-              title="E-Commerce Platform"
-              description="Full-featured e-commerce platform with product catalog, shopping cart, and checkout flow. Implemented responsive design with real-time inventory updates and secure payment integration."
-              technologies={["React", "TypeScript", "TailwindCSS", "Redux"]}
-              githubUrl="https://github.com"
-              liveUrl="https://example.com"
-            />
-
-            <ProjectCard
-              title="SaaS Dashboard"
-              description="Analytics dashboard for a B2B SaaS platform. Built with modern React patterns, featuring data visualization, user management, and real-time notifications with WebSocket integration."
-              technologies={["React", "Next.js", "Chart.js", "WebSockets"]}
-              githubUrl="https://github.com"
-              liveUrl="https://example.com"
-            />
-
-            <ProjectCard
-              title="Mobile App (React Native)"
-              description="Cross-platform mobile application for iOS and Android. Implemented native-like performance with offline capabilities and smooth animations using React Native best practices."
-              technologies={["React Native", "Redux", "Firebase", "Expo"]}
-              githubUrl="https://github.com"
-            />
-          </div>
+          <FeaturedProjectCard
+            title="Dogether"
+            subtitle="Frontend Developer"
+            duration="~2 Years (2023-2025)"
+            description="Dogether was a product startup platform focused on online donations and campaigns, developed by a small cross-functional team. I worked on building and maintaining the frontend application, taking ownership of core architecture and features."
+            role="Frontend Developer responsible for designing and implementing the UI, integrating GraphQL APIs, implementing payment workflows, adding multi-language support, and contributing to new product directions. Worked closely with backend and product teams, ensuring code quality and feature delivery."
+            highlights={[
+              "Designed and built the frontend from scratch using React, TypeScript, and SCSS",
+              "Implemented donation and subscription flows with Fondy payment integration",
+              "Integrated GraphQL APIs using Relay (queries, mutations, reusable fragments)",
+              "Added full multi-language support with i18next",
+              "Contributed to a new product direction: events and online ticket sales",
+            ]}
+            technologies={[
+              "React",
+              "TypeScript",
+              "GraphQL",
+              "Relay",
+              "SCSS",
+              "HTML",
+              "Webpack",
+              "i18next",
+            ]}
+            imageUrls={["one", "two", "three", "four", "five"]}
+            liveUrl="https://example.com"
+            githubUrl="https://github.com"
+          />
         </div>
       </section>
 
