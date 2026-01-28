@@ -171,14 +171,14 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider mb-4">
-              My Main Commercial Experience
+              Featured project
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Featured Project
+              Career / Professional Experience
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl">
-              A real commercial experience where I took ownership of the
-              frontend and grew as a developer.
+              A real company experience where I took ownership of the frontend
+              and grew as a developer.
             </p>
           </div>
 
@@ -217,35 +217,38 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Learning & Side Projects
+              Freelance Projects
             </h2>
             <p className="text-muted-foreground max-w-2xl">
-              Personal projects built to explore new technologies, experiment
-              with ideas, and contribute to the developer community.
+              Freelance projects created on demand for clients, focusing on
+              delivering clean, responsive, and functional web interfaces.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ProjectCard
-              title="Component Library"
-              description="Open-source React component library with 30+ reusable UI components. Includes comprehensive documentation, Storybook integration, and TypeScript support."
-              technologies={["React", "TypeScript", "Storybook", "Jest"]}
-              githubUrl="https://github.com"
-              liveUrl="https://example.com"
+              title="Transport Company Landing Page"
+              description="A static landing website built for a transport company, focused on clean design and user-friendly functionality. The project demonstrates practical frontend skills with React, SCSS, and modern development tooling."
+              technologies={["HTML", "SCSS", "JavaScript"]}
+              githubUrl="https://github.com/cayceworld/transport-company-website"
+              imageUrls={[
+                "moversbonn/one",
+                "moversbonn/two",
+                "moversbonn/three",
+                "moversbonn/four",
+                "moversbonn/five",
+              ]}
+              featuresDesc={[
+                "Google Maps integration to display company location",
+                "Automatic fetching and displaying of Google Reviews with live updates",
+                "Contact form for customer inquiries",
+              ]}
             />
 
             <ProjectCard
               title="Web Performance Toolkit"
               description="Collection of tools and utilities for analyzing and improving web performance. Includes metrics dashboard, automated testing, and optimization recommendations."
               technologies={["Vue.js", "Vite", "Web APIs", "Chart.js"]}
-              githubUrl="https://github.com"
-              liveUrl="https://example.com"
-            />
-
-            <ProjectCard
-              title="Design System Documentation"
-              description="Comprehensive design system documentation with interactive component previews. Built with modern tooling to showcase design tokens and implementation patterns."
-              technologies={["Astro", "React", "MDX", "CSS Modules"]}
               githubUrl="https://github.com"
               liveUrl="https://example.com"
             />

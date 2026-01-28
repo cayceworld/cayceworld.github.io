@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 export interface FeaturedProjectCardProps {
@@ -23,8 +23,6 @@ export default function FeaturedProjectCard({
   technologies,
   highlights,
   imageUrls,
-  liveUrl,
-  githubUrl,
 }: FeaturedProjectCardProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const hasImages = imageUrls && imageUrls.length > 0;

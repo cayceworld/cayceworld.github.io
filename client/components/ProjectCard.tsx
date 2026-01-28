@@ -1,39 +1,87 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
+import { useState } from "react";
 
 export interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
-  imageUrl?: string;
+  imageUrls?: string[];
   liveUrl?: string;
   githubUrl?: string;
+  featuresDesc?: string[];
 }
 
 export default function ProjectCard({
   title,
   description,
   technologies,
-  imageUrl,
+  imageUrls,
   liveUrl,
   githubUrl,
+  featuresDesc,
 }: ProjectCardProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const hasImages = imageUrls && imageUrls.length > 0;
+
+  const nextImage = () => {
+    if (hasImages) {
+      setCurrentImageIndex((prev) => (prev + 1) % imageUrls.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (hasImages) {
+      setCurrentImageIndex((prev) =>
+        prev === 0 ? imageUrls.length - 1 : prev - 1,
+      );
+    }
+  };
+
   return (
     <div className="group overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-md hover:border-accent/50">
       {/* Image placeholder or actual image */}
-      <div className="relative h-48 w-full bg-secondary/50 overflow-hidden">
-        {imageUrl ? (
+      <div className="relative h-96 w-full bg-secondary/50 overflow-hidden group border flex justify-center ">
+        {hasImages && imageUrls[currentImageIndex] ? (
           <img
-            src={imageUrl}
-            alt={title}
-            className="h-full w-full object-cover transition-transform group-hover:scale-105"
+            src={imageUrls[currentImageIndex] + ".png"}
+            alt={`${title} screenshot`}
+            className="h-full object-cover basis-auto"
           />
         ) : (
           <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10">
             <div className="text-center">
-              <p className="text-sm text-muted-foreground">Screenshot</p>
-              <p className="text-xs text-muted-foreground mt-1">placeholder</p>
+              <p className="text-lg font-semibold text-muted-foreground mb-2">
+                Screenshot {currentImageIndex + 1}/
+                {hasImages ? imageUrls.length : 1}
+              </p>
+              <p className="text-sm text-muted-foreground">placeholder</p>
             </div>
           </div>
+        )}
+
+        {/* Image Navigation */}
+        {hasImages && imageUrls.length > 1 && (
+          <>
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-black/50 text-white hover:bg-black/70 transition-colors opacity-0 group-hover:opacity-100"
+              aria-label="Previous image"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-black/50 text-white hover:bg-black/70 transition-colors opacity-0 group-hover:opacity-100"
+              aria-label="Next image"
+            >
+              <ChevronRight size={20} />
+            </button>
+
+            {/* Image Counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black/50 text-white text-sm">
+              {currentImageIndex + 1} / {imageUrls.length}
+            </div>
+          </>
         )}
       </div>
 
@@ -46,6 +94,18 @@ export default function ProjectCard({
         <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
           {description}
         </p>
+
+        {/* Features */}
+        {featuresDesc && (
+          <>
+            <h5>Key features: </h5>
+            <ul className="list-disc list-inside mb-4 text-gray-700">
+              {featuresDesc.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </>
+        )}
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-4">
