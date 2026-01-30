@@ -253,8 +253,7 @@ export default function Index() {
                 "legalin/one",
                 "legalin/two",
                 "legalin/three",
-                "legalin/four",
-                "legalin/five",
+                "legalin/four"
               ]}
               featuresDesc={[
                 "Multi-section landing page with smooth navigation",
